@@ -14,7 +14,8 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="35dp" />
+        tools:layout_editor_absoluteY="35dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView3"
@@ -25,7 +26,8 @@
         android:textColor="@android:color/darker_gray"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="390dp" />
+        tools:layout_editor_absoluteY="390dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView4"
