@@ -17,7 +17,7 @@ import com.example.splashscreen.IntroSliderAdapter
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var adapter: NotificationAdapter
+    private lateinit var notificationAdapter: NotificationAdapter
     private lateinit var binding: ActivityMainBinding
 
     private val introSliderAdapter = IntroSliderAdapter(
@@ -49,13 +49,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        adapter = NotificationAdapter()
+        notificationAdapter = NotificationAdapter()
         //TODO: Create notifications fragment with the recycler view
         //binding.recyclerView.adapter = adapter
-        binding.introSliderViewPager.adapter=introSliderAdapter
-        binding
+
+        //Carousel
+        binding.introSliderViewPager.adapter = introSliderAdapter
         setupIndicators()
         setCurrentIndicator(0)
+        registerOnPageChange()
+        nextAction()
+        skipIntroAction()
+
+        //Navigation bar
+
+
+
+
+    }
+
+    private fun registerOnPageChange() {
         binding.introSliderViewPager.registerOnPageChangeCallback(object :
             ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
@@ -63,6 +76,18 @@ class MainActivity : AppCompatActivity() {
                 setCurrentIndicator(position)
             }
         })
+    }
+
+    private fun skipIntroAction() {
+        binding.textSkipIntro.setOnClickListener(){
+            Intent(applicationContext, LoginActivity::class.java).also{
+                startActivity(it)
+                finish()
+            }
+        }
+    }
+
+    private fun nextAction() {
         binding.btnNext.setOnClickListener(){
             if(binding.introSliderViewPager.currentItem+1<introSliderAdapter.itemCount){
                 binding.introSliderViewPager.currentItem+=1
@@ -73,16 +98,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        binding.textSkipIntro.setOnClickListener(){
-            Intent(applicationContext, LoginActivity::class.java).also{
-                startActivity(it)
-                finish()
-            }
-        }
-
     }
 
-    fun setupIndicators(){
+    private fun setupIndicators(){
         val indicators = arrayOfNulls<ImageView>(introSliderAdapter.itemCount)
         val layoutParams: LinearLayout.LayoutParams =
             LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
