@@ -2,6 +2,7 @@ package com.example.groovehub_app
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import com.example.groovehub_app.databinding.ActivityLoginBinding
 import com.example.groovehub_app.databinding.ActivityRegisterBinding
@@ -22,6 +23,16 @@ class LoginActivity: AppCompatActivity() {
 
         }
 
+
+
+
+
+    }
+
+    override fun onBackPressed() {
+        if(isTaskRoot){
+            finish()
+        }
     }
 
 
