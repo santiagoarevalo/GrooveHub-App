@@ -6,6 +6,7 @@
     <color name="black_bg">#171717</color>
     <color name="gray">#525252</color>
     <color name="gray_2">#585858</color>
+    <color name="gray_text">#8A8A8A</color>
     <color name="white">#FFFFFFFF</color>
     <color name="rebeccaPurple">#47246B</color>
     <color name="purple_0">#B390DE</color>

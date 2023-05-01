@@ -8,4 +8,9 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="skip_intro">SALTAR INTRODUCCIÓN</string>
     <string name="next_btn">Siguiente</string>
+    <string name="my_account">Mi Cuenta</string>
+    <string name="name">Nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="username">Nombre de usuario</string>
+
 </resources>
