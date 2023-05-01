@@ -18,7 +18,7 @@
     </style>
     <style name="Theme.GrooveHubApp.NoActionBar">
         <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+        <item name="windowNoTitle">false</item>
     </style>
     <style name="Theme.Splashscreen.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.Splashscreen.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
