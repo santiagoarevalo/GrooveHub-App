@@ -1,16 +1,28 @@
 <resources>
+
+    //Carousel and login strings
     <string name="app_name">GrooveHub-App</string>
     <string name="Email">Email</string>
-    <string name="Password">Contraseña</string>
-    <string name="SignUp">Registrarse</string>
-    <string name="LogIn">Ingresar</string>
+    <string name="Password">Password</string>
+    <string name="SignUp">Register</string>
+    <string name="LogIn">Login</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
-    <string name="skip_intro">SALTAR INTRODUCCIÓN</string>
-    <string name="next_btn">Siguiente</string>
+    <string name="skip_intro">Skip Intro</string>
+    <string name="next_btn">Next</string>
     <string name="my_account">Mi Cuenta</string>
     <string name="name">Nombre</string>
     <string name="last_name">Apellido</string>
-    <string name="username">Nombre de usuario</string>
+    <string name="username">Nombre de usuar
+
+    //Search strings
+    <string name="searchHint">Search</string>
+
+
+    //Notification strings
+    <string name="notificationTitle">Notifications</string>
+    <string name="faberCastell">faberCastelln\'t liked your post. 2w </string>
+    <string name="notificationMessage">You have %1$d new notifications</string>
+    <string name= "followingBttn">Following</string>
 
 </resources>
