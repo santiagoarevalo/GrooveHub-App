@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
 import com.example.groovehub_app.adapter.NotificationAdapter
+import com.example.groovehub_app.databinding.ActivityLoginBinding
 import com.example.groovehub_app.databinding.ActivityMainBinding
 import com.example.splashscreen.IntroSlide
 import com.example.splashscreen.IntroSliderAdapter
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var adapter: NotificationAdapter
     private lateinit var binding: ActivityMainBinding
-    
+
     private val introSliderAdapter = IntroSliderAdapter(
         listOf(
             IntroSlide(
@@ -78,6 +79,7 @@ class MainActivity : AppCompatActivity() {
                 finish()
             }
         }
+
     }
 
     fun setupIndicators(){
@@ -122,4 +124,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }
