@@ -3,17 +3,19 @@
     //Carousel and login strings
     <string name="app_name">GrooveHub-App</string>
     <string name="Email">Email</string>
-    <string name="Password">Password</string>
-    <string name="SignUp">Register</string>
-    <string name="LogIn">Login</string>
+    <string name="Password">Contraseña</string>
+    <string name="SignUp">Registrarse</string>
+    <string name="LogIn">Ingresar</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
-    <string name="skip_intro">Skip Intro</string>
-    <string name="next_btn">Next</string>
-    <string name="my_account">My Account</string>
-    <string name="name">Name</string>
-    <string name="last_name">LastName</string>
-    <string name="username">Username</string>
+
+    <string name="skip_intro">SALTAR INTRODUCCIÓN</string>
+    <string name="next_btn">SIGUIENTE</string>
+    <string name="my_account">Mi Cuenta</string>
+    <string name="name">Nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="username">Nombre de usuario</string>
+
 
     //Search strings
     <string name="searchHint">Search</string>
