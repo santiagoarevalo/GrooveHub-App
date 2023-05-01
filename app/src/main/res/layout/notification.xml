@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/black_bg">
 
     <TextView
         android:id="@+id/usernameTV"
@@ -13,7 +14,9 @@
         android:layout_marginTop="13dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
-        android:text="TextView"
+        android:text="@string/faberCastell"
+        android:textAppearance="@style/faberCastellStyle"
+        android:gravity="top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/followBttn"
         app:layout_constraintStart_toEndOf="@+id/userImageCardView"
@@ -40,7 +43,8 @@
             android:id="@+id/imageUserNotification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="userImage"/>
     </androidx.cardview.widget.CardView>
 
     <!-- Redondear los bordes del boton -->
@@ -51,7 +55,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="17dp"
-        android:text="Following"
+        android:text="@string/followingBttn"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
