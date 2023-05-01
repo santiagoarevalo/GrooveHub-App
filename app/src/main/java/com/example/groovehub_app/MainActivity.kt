@@ -22,23 +22,23 @@ class MainActivity : AppCompatActivity() {
     private val introSliderAdapter = IntroSliderAdapter(
         listOf(
             IntroSlide(
-                "Welcome to the last music sharing platform you’ll ever need",
-                "Welcome to Groovehub. Find your sound, find your people, share the love",
+                "Bienvenido a la última plataforma para compartir música que necesitarás",
+                "Bienvenido a Groovehub. Encuentra tu sonido, encuentra a personas, comparte el amor",
                 R.drawable.sound
             ),
             IntroSlide(
-                "Find your sound",
-                "We bring the artists you like, and give them the power to share more than just their music",
+                "Encuentra tu sonido",
+                "Traemos a los artistas que te gustan y les damos el poder de compartir algo más que su música",
                 R.drawable.musicnote
             ),
             IntroSlide(
-                "Find your people",
-                "Create communities and connections around the music you love",
+                "Encuentre a personas",
+                "Crea comunidades y conexiones en torno a la música que te gusta",
                 R.drawable.people
             ),
             IntroSlide(
-                "Share the love",
-                "Got something on your mind? Share your thoughts with an interactive post",
+                "Comparte el amor",
+                "¿Tienes algo en mente? Comparte tus pensamientos con un post interactivo",
                 R.drawable.share
             )
         )

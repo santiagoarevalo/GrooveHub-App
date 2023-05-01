@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
             editor.putBoolean(pref_show_introslide,true)
             editor.apply()
         }else{
-            startActivity(Intent(this, AnotherActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
     }

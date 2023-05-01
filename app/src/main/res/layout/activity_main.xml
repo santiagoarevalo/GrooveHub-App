@@ -14,29 +14,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="70dp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="@color/black_bg"
+        android:fontFamily="@font/urbanist"
         android:text="@string/skip_intro"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="@color/purple_50"
+        android:fontFamily="@font/urbanist"
         android:minWidth="110dp"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:backgroundTint="@color/purple_200"
         android:text="@string/next_btn"
         android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textSkipIntro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
     <LinearLayout
         android:id="@+id/indicatorsContainer"
         android:layout_width="match_parent"

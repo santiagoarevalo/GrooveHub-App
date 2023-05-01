@@ -17,6 +17,7 @@
     tools:ignore="Suspicious0dp" />
 <TextView
     android:id="@+id/textTitle"
+    android:fontFamily="@font/urbanist"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Title text"
@@ -26,6 +27,7 @@
     android:textColor="@color/white"/>
 <TextView
     android:id="@+id/textDescription"
+    android:fontFamily="@font/urbanist"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Description Text"
