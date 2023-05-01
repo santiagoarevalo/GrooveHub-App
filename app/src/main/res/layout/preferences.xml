@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,12 +11,18 @@
         android:id="@+id/textView"
         android:layout_width="188dp"
         android:layout_height="37dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="35dp"
+
+        android:layout_marginEnd="182dp"
+        android:fontFamily="@font/urbanist"
         android:text="What's defines me?"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/white"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -23,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Favorite Artist"
+        android:fontFamily="@font/urbanist"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@android:color/darker_gray"
         android:textSize="18sp"
@@ -34,21 +42,29 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/urbanist"
         android:text="Music Taste"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@android:color/darker_gray"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="92dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/urbanist"
         android:text="POP"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="155dp"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:ignore="MissingConstraints" />
 
 
@@ -56,125 +72,198 @@
         android:id="@+id/button2"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/urbanist"
         android:text="SALSA"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="155dp"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/urbanist"
         android:text="ROCK"
-        tools:layout_editor_absoluteX="290dp"
-        tools:layout_editor_absoluteY="155dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/urbanist"
         android:text="JAZZ"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="233dp"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/urbanist"
         android:text="REGGAE"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="237dp"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/urbanist"
         android:text="HIP-HOP"
-        tools:layout_editor_absoluteX="290dp"
-        tools:layout_editor_absoluteY="233dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="134dp"
+        android:fontFamily="@font/urbanist"
         android:text="+"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="308dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
         android:text="THE BEATLES"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="448dp"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/urbanist"
         android:text="KATY PERRY"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="448dp"
+        app:layout_constraintEnd_toStartOf="@+id/button16"
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button11"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/urbanist"
         android:text="GRUPO NICHE"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="520dp"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button12"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/urbanist"
         android:text="BEYONCE"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="520dp"
+        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintStart_toEndOf="@+id/button11"
+        app:layout_constraintTop_toBottomOf="@+id/button9"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button13"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/urbanist"
         android:text="FREDDIE MERCURY"
-        tools:layout_editor_absoluteX="297dp"
-        tools:layout_editor_absoluteY="518dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/button16"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button16"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/urbanist"
         android:text="MORAT"
-        tools:layout_editor_absoluteX="295dp"
-        tools:layout_editor_absoluteY="453dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button14"
         android:layout_width="106dp"
         android:layout_height="56dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="134dp"
+        android:fontFamily="@font/urbanist"
         android:text="+"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="603dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button12"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button15"
         android:layout_width="265dp"
         android:layout_height="45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/urbanist"
         android:text="Let's Home"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="670dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button14"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

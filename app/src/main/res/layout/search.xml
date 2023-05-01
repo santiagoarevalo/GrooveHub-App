@@ -17,8 +17,9 @@
         android:layout_marginTop="13dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
+        android:fontFamily="@font/urbanist"
         android:text="el_capy"
-        android:textColor="@color/white"
+        android:textColor="@color/purple_0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/followBttn"
         app:layout_constraintStart_toEndOf="@+id/userImageCardView"
@@ -60,6 +61,8 @@
         android:layout_marginEnd="68dp"
         android:layout_marginBottom="17dp"
         android:text="Following"
+        android:fontFamily="@font/urbanist"
+
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,6 +76,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Text View"
+        android:fontFamily="@font/urbanist"
+
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/followBttn"
         app:layout_constraintHorizontal_bias="0.136"
