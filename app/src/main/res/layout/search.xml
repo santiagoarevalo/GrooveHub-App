@@ -41,8 +41,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
-        <!--android:src="@drawable/icon_search_person"-->
+
         <ImageView
+            android:src="@drawable/icon_search_person"
             android:id="@+id/imageUserNotification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -78,8 +79,8 @@
         app:layout_constraintStart_toEndOf="@+id/userImageCardView"
         app:layout_constraintTop_toBottomOf="@+id/usernameTV" />
 
-    <!--android:background="@drawable/img_close"-->
     <Button
+        android:background="@drawable/img_close"
         android:id="@+id/myButton"
         android:layout_width="13dp"
         android:layout_height="13dp"
@@ -89,6 +90,7 @@
         android:textColorLink="#737373"
         app:iconTint="#737373"
         tools:layout_editor_absoluteX="382dp"
-        tools:layout_editor_absoluteY="28dp" />
+        tools:layout_editor_absoluteY="28dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
