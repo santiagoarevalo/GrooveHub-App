@@ -8,12 +8,14 @@
     <string name="LogIn">Ingresar</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+
     <string name="skip_intro">SALTAR INTRODUCCIÓN</string>
     <string name="next_btn">SIGUIENTE</string>
     <string name="my_account">Mi Cuenta</string>
     <string name="name">Nombre</string>
     <string name="last_name">Apellido</string>
     <string name="username">Nombre de usuario</string>
+
 
     //Search strings
     <string name="searchHint">Search</string>
