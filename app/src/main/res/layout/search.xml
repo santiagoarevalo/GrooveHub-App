@@ -91,6 +91,6 @@
         app:iconTint="#737373"
         tools:layout_editor_absoluteX="382dp"
         tools:layout_editor_absoluteY="28dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

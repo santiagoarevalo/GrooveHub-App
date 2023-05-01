@@ -66,14 +66,14 @@ class MainActivity : AppCompatActivity() {
             if(binding.introSliderViewPager.currentItem+1<introSliderAdapter.itemCount){
                 binding.introSliderViewPager.currentItem+=1
             }else{
-                Intent(applicationContext, AnotherActivity::class.java).also{
+                Intent(applicationContext, LoginActivity::class.java).also{
                     startActivity(it)
                     finish()
                 }
             }
         }
         binding.textSkipIntro.setOnClickListener(){
-            Intent(applicationContext, AnotherActivity::class.java).also{
+            Intent(applicationContext, LoginActivity::class.java).also{
                 startActivity(it)
                 finish()
             }

@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">GrooveHub-App</string>
+    <string name="Email">Email</string>
+    <string name="Password">Contraseña</string>
+    <string name="SignUp">Registrarse</string>
+    <string name="LogIn">Ingresar</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="skip_intro">SKIP INTRO</string>
