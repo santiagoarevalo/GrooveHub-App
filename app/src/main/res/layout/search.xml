@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/black_bg">
 
     <!-- Redondear el card view-->
 
@@ -17,6 +18,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:text="el_capy"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/followBttn"
         app:layout_constraintStart_toEndOf="@+id/userImageCardView"
@@ -57,7 +59,8 @@
         android:layout_marginEnd="68dp"
         android:layout_marginBottom="17dp"
         android:text="Following"
-        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -69,6 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Text View"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/followBttn"
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toEndOf="@+id/userImageCardView"
