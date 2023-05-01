@@ -31,6 +31,7 @@
         android:textStyle="bold"
         android:backgroundTint="@color/purple_200"
         android:text="@string/next_btn"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/textSkipIntro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
