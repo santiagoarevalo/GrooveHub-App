@@ -17,7 +17,7 @@
         android:background="@drawable/rectangle"
         android:backgroundTint="@color/black_bg"
         android:fontFamily="@font/urbanist"
-        android:text="SKIPT INTRO"
+        android:text="@string/skip_intro"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"

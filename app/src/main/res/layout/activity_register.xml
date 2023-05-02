@@ -255,6 +255,7 @@
         android:background="@drawable/rectangle"
         android:fontFamily="@font/urbanist"
         android:text="@string/next_btn"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
