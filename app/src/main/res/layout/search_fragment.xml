@@ -8,6 +8,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/black_bg"
         android:padding="16dp">
 
         <EditText
@@ -15,13 +16,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Search"/>
+            android:background="@color/gray"
+            android:fontFamily="@font/urbanist"
+            android:hint="Search"
+            android:textAlignment="textStart"
+            android:paddingStart="15dp"
+            android:paddingEnd="8dp"
+            android:textColorHint="@color/white" />
 
         <Button
             android:id="@+id/search_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search"/>
+            android:text="Search" />
 
     </LinearLayout>
 
@@ -29,37 +36,7 @@
         android:id="@+id/search_results_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="@color/black"
-        tools:ignore="ExtraText">
-
-        <Button
-            android:id="@+id/home_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Home"/>
-
-        <Button
-            android:id="@+id/explore_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Explore"/>
-
-        <Button
-            android:id="@+id/profile_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Profile"/>
-
-    </LinearLayout>
+        android:layout_weight="1"
+        android:background="@color/black_bg"/>
 
 </LinearLayout>
