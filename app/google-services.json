@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1048609742002",
+    "project_id": "groovehub-app-52241",
+    "storage_bucket": "groovehub-app-52241.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048609742002:android:1bafa1d2a2448738e0bdab",
+        "android_client_info": {
+          "package_name": "com.example.groovehub_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048609742002-k371hn4ekkq5hr2s9t6iebva5m7ka9a2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVRj7jnzprr1hJoAG3aJ3Zqaqfbb-KcZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048609742002-k371hn4ekkq5hr2s9t6iebva5m7ka9a2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
