@@ -1,4 +1,4 @@
-package com.example.splashscreen
+package com.example.groovehub_app
 
 
 data class IntroSlide(

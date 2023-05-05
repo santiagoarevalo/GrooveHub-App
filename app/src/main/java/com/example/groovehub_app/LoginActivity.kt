@@ -23,7 +23,6 @@ class LoginActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
-
         setContentView(binding.root)
 
         binding.buttonSignUp.setOnClickListener {
@@ -49,7 +48,7 @@ class LoginActivity: AppCompatActivity() {
                                 val user = it.toObject(User::class.java)
                                 //2.Save the user
                                 savaUser(user!!)
-                                startActivity(Intent(this, AnotherActivity::class.java))
+                                startActivity(Intent(this, MainActivity::class.java))
                                 finish()
                             }
 

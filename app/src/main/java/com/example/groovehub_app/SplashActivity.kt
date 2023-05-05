@@ -14,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
         //En caso de necesitar login de fondo debe realizarse en esta pantallas
         preferences = getSharedPreferences("IntroSlider", Context.MODE_PRIVATE)
         if(!preferences.getBoolean(pref_show_introslide,false)){
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, CarrouselActivity::class.java))
             finish()
             val editor = preferences.edit()
             editor.putBoolean(pref_show_introslide,true)

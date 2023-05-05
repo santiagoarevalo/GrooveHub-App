@@ -1,49 +1,23 @@
 package com.example.groovehub_app
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.view.get
-import androidx.viewpager2.widget.ViewPager2
+import androidx.fragment.app.Fragment
 import com.example.groovehub_app.adapter.NotificationAdapter
-import com.example.groovehub_app.databinding.ActivityLoginBinding
 import com.example.groovehub_app.databinding.ActivityMainBinding
-import com.example.splashscreen.IntroSlide
-import com.example.splashscreen.IntroSliderAdapter
+import com.example.groovehub_app.fragment.HomeFragment
+import com.example.groovehub_app.fragment.NewsFragment
+import com.example.groovehub_app.fragment.ProfileFragment
+import com.example.groovehub_app.fragment.SearchFragment
+
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var notificationAdapter: NotificationAdapter
     private lateinit var binding: ActivityMainBinding
 
-    private val introSliderAdapter = IntroSliderAdapter(
-        listOf(
-            IntroSlide(
-                "Bienvenido a la última plataforma para compartir música que necesitarás",
-                "Bienvenido a Groovehub. Encuentra tu sonido, encuentra a personas, comparte el amor",
-                R.drawable.sound
-            ),
-            IntroSlide(
-                "Encuentra tu sonido",
-                "Traemos a los artistas que te gustan y les damos el poder de compartir algo más que su música",
-                R.drawable.musicnote
-            ),
-            IntroSlide(
-                "Encuentre a personas",
-                "Crea comunidades y conexiones en torno a la música que te gusta",
-                R.drawable.people
-            ),
-            IntroSlide(
-                "Comparte el amor",
-                "¿Tienes algo en mente? Comparte tus pensamientos con un post interactivo",
-                R.drawable.share
-            )
-        )
-    )
+
+
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,93 +27,47 @@ class MainActivity : AppCompatActivity() {
         //TODO: Create notifications fragment with the recycler view
         //binding.recyclerView.adapter = adapter
 
-        //Carousel
-        binding.introSliderViewPager.adapter = introSliderAdapter
-        setupIndicators()
-        setCurrentIndicator(0)
-        registerOnPageChange()
-        nextAction()
-        skipIntroAction()
+
 
         //Navigation bar
 
+        var homeFragment = HomeFragment()
+        var newsFragment = NewsFragment()
+        var profileFragment = ProfileFragment()
+        var searchFragment = SearchFragment()
 
 
-
-    }
-
-    private fun registerOnPageChange() {
-        binding.introSliderViewPager.registerOnPageChangeCallback(object :
-            ViewPager2.OnPageChangeCallback(){
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                setCurrentIndicator(position)
-            }
-        })
-    }
-
-    private fun skipIntroAction() {
-        binding.textSkipIntro.setOnClickListener(){
-            Intent(applicationContext, LoginActivity::class.java).also{
-                startActivity(it)
-                finish()
-            }
-        }
-    }
-
-    private fun nextAction() {
-        binding.btnNext.setOnClickListener(){
-            if(binding.introSliderViewPager.currentItem+1<introSliderAdapter.itemCount){
-                binding.introSliderViewPager.currentItem+=1
-            }else{
-                Intent(applicationContext, LoginActivity::class.java).also{
-                    startActivity(it)
-                    finish()
+        binding.bottomNavigationView.setOnItemSelectedListener{
+            when(it.itemId){
+                R.id.nav_home -> {
+                    setCurrentFragment(homeFragment)
+                    true
                 }
+
+                R.id.nav_news -> {
+                    setCurrentFragment(newsFragment)
+                    true
+                }
+
+                R.id.nav_profile -> {
+                    setCurrentFragment(profileFragment)
+                    true
+                }
+
+                R.id.nav_search -> {
+                    setCurrentFragment(searchFragment)
+                    true
+                }
+                else -> false
+
             }
         }
     }
 
-    private fun setupIndicators(){
-        val indicators = arrayOfNulls<ImageView>(introSliderAdapter.itemCount)
-        val layoutParams: LinearLayout.LayoutParams =
-            LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-        layoutParams.setMargins(8,0,8,0)
-        for(i in indicators.indices){
-            indicators[i] = ImageView(applicationContext)
-            indicators[i].apply {
-                this?.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        applicationContext,
-                        R.drawable.indicator_inactive
-                    )
-                )
-                this?.layoutParams = layoutParams
-            }
-            binding.indicatorsContainer.addView(indicators[i])
-        }
-
-    }
-
-    fun setCurrentIndicator(index:Int){
-        val childCount= binding.indicatorsContainer.childCount
-        for(i in 0 until childCount){
-            val imageView = binding.indicatorsContainer[i] as ImageView
-            if(i==index){
-                imageView.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        applicationContext,
-                        R.drawable.indicator_active
-                    )
-                )
-            }else{
-                imageView.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        applicationContext,
-                        R.drawable.indicator_inactive
-                    )
-                )
-            }
+    private fun setCurrentFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.containerView,fragment)
+            commit()
         }
     }
 

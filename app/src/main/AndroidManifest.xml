@@ -18,6 +18,9 @@
             android:name=".AnotherActivity"
             android:exported="false" />
         <activity
+            android:name=".CarrouselActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
