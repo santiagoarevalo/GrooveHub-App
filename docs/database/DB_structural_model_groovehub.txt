@@ -1,0 +1,129 @@
+{
+  "usuarios": {
+    "usuario1": {
+      "id_usuario": "353gh23859cjde4",
+      "tipo": "normal",
+      "nombre": "Juan",
+      "nombre_usuario": "juan123",
+      "descripcion": "¡Hola! Soy un amante de la música.",
+      "foto_perfil": "https://example.com/foto_perfil_juan.jpg",
+      "foto_portada": "https://example.com/foto_portada_juan.jpg",
+      "generos_preferidos": [
+        "rock",
+        "pop"
+      ],
+      "artistas_favoritos": [
+        "Bad Bunny",
+        "Feid"
+      ],
+      "publicaciones": {
+        "publicacion1": "123456789",
+        "publicacion2": "987654321"
+      },
+      "seguidores": {
+        "usuario2": "423gh23859cjde4",
+        "usuario3": "198ki54837fewjw"
+      },
+      "seguidos": {
+        "artista1": "903fjfkw834742",
+        "artista2": "551jsknf44839l"
+      }
+    },
+    "usuario2": {
+      "id_usuario": "353gh23ffe79cjde4",
+      "tipo": "artista",
+      "nombre": "Maria",
+      "nombre_usuario": "maria_music",
+      "descripcion": "¡Bienvenidos a mi mundo musical!",
+      "foto_perfil": "https://example.com/foto_perfil_maria.jpg",
+      "foto_portada": "https://example.com/foto_portada_maria.jpg",
+      "generos_preferidos": [
+        "pop",
+        "electrónica"
+      ],
+      "publicaciones": {
+        "publicacion3": "4467sdjdkdwk8293"
+      },
+      "seguidores": {
+        "usuario1": "353gh23859cjde4",
+        "usuario3": "198ki54837fewjw"
+      },
+      "seguidos": {
+        "artista3": "467djshfu9002091"
+      }
+    }
+  },
+  "publicaciones": {
+    "publicacion1": {
+      "usuario": "usuario1",
+      "titulo": "Nueva canción",
+      "contenido": "¡Acabo de lanzar mi nueva canción! Espero que les guste.",
+      "fecha_completa": "2023-04-25T15:30:00",
+      "cancion": "cancion1",
+      "me_gustas": 10,
+      "no_me_gustas": 2,
+      "comentarios": 3,
+      "veces_guardada": 5
+    },
+    "publicacion2": {
+      "usuario": "usuario1",
+      "titulo": "Concierto en vivo",
+      "contenido": "¡Los invito a mi próximo concierto en vivo! Será una noche increíble.",
+      "fecha_completa": "2023-05-10T20:00:00",
+      "me_gustas": 15,
+      "no_me_gustas": 1,
+      "comentarios": 2,
+      "veces_guardada": 3
+    },
+    "publicacion3": {
+      "usuario": "usuario2",
+      "titulo": "Nuevo álbum",
+      "contenido": "Mi nuevo álbum ya está disponible en todas las plataformas. ¡Disfrútenlo!",
+      "fecha_completa": "2023-05-01T12:00:00",
+      "cancion": "cancion2",
+      "me_gustas": 20,
+      "no_me_gustas": 0,
+      "comentarios": 5,
+      "veces_guardada": 10
+    }
+  },
+  "comentarios": {
+    "comentario1": {
+      "usuario": "usuario1",
+      "contenido": "Excelente publicación. Me encanta tu música.",
+      "me_gustas": 5
+    },
+    "comentario2": {
+      "usuario": "usuario2",
+      "contenido": "Estoy ansioso por escuchar tu nuevo álbum. ¡Felicidades!",
+      "me_gustas": 3
+    },
+    "comentario3": {
+      "usuario": "usuario3",
+      "contenido": "¡Eres un gran artista! Sigue así.",
+      "me_gustas": 2
+    }
+  },
+  "canciones": {
+    "cancion1": {
+      "artista": "artista1",
+      "album": "album1",
+      "nombre": "Canción 1",
+      "anio_lanzamiento": 2022,
+      "atributos_musicales": [
+        "vivacidad",
+        "bailable"
+      ]
+    },
+    "cancion2": {
+      "artista": "artista2",
+      "album": "album2",
+      "nombre": "Canción 2",
+      "anio_lanzamiento": 2021,
+      "atributos_musicales": [
+        "instrumentalidad",
+        "energía"
+      ]
+    }
+  }
+}
