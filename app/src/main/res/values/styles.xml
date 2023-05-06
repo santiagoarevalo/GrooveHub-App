@@ -2,6 +2,6 @@
 <resources>
     <style name="faberCastellStyle">
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/purple_0</item>
+        <item name="android:textColor"> @color/neutral_400 </item>
     </style>
 </resources>

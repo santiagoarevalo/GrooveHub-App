@@ -14,14 +14,15 @@
         android:layout_marginTop="13dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/faberCastell"
-        android:textAppearance="@style/faberCastellStyle"
-        android:gravity="top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/followBttn"
         app:layout_constraintStart_toEndOf="@+id/userImageCardView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/faberCastell"
+        android:textAppearance="@style/faberCastellStyle"
+        android:gravity="top"
 
+        />
     <!-- Redondear el card view-->
     <androidx.cardview.widget.CardView
         android:id="@+id/userImageCardView"
