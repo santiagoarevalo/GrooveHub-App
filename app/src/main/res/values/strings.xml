@@ -26,6 +26,12 @@
     <string name="notificationTitle">Notifications</string>
     <string name="faberCastell"> faberCastelln\'t liked your post. 2w </string>
     <string name="notificationMessage">You have %1$d new notifications</string>
-    <string name= "followingBttn">Following</string>
+    <string name="followingBttn">Following</string>
+
+    //NewPost strings
+    <string name="newPost">Nueva Publicación</string>
+    <string name="postIt">Publicar</string>
+
+
 
 </resources>

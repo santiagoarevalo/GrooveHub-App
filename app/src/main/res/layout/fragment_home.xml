@@ -15,8 +15,14 @@
                     android:id="@+id/followmenuview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:itemTextAppearanceActive="@style/activeTextMenu"
+                    app:itemTextAppearanceInactive="@style/inactiveTextMenu"
+                    app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+                    app:itemTextColor="@color/white"
+                    android:background="@color/black"
                     app:labelVisibilityMode="labeled"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:menu="@menu/home_options_menu"
@@ -38,5 +44,21 @@
                 </androidx.recyclerview.widget.RecyclerView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/newpost_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/purple_0"
+            android:contentDescription="description"
+            app:borderWidth="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@color/purple_50"
+            app:srcCompat="@drawable/ic_new_post_music_note"/>
 
 </FrameLayout>

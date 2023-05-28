@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.groovehub_app.IntroSlide
+import com.example.groovehub_app.model.IntroSlide
 import com.example.groovehub_app.R
 
 class IntroSliderAdapter (private val introSlides: List<IntroSlide>):
