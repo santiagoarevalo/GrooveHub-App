@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         var newsFragment = NewsFragment()
         var profileFragment = ProfileFragment()
         var searchFragment = SearchFragment()
-
+        setCurrentFragment(homeFragment) // Carga el fragmento de home por defecto
 
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
@@ -70,5 +70,7 @@ class MainActivity : AppCompatActivity() {
             commit()
         }
     }
+
+
 
 }

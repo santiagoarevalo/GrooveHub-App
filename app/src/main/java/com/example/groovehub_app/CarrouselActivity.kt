@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
+import com.example.groovehub_app.adapter.IntroSliderAdapter
 import com.example.groovehub_app.databinding.ActivityCarrouselBinding
 
 class CarrouselActivity : AppCompatActivity() {
