@@ -10,9 +10,6 @@
     tools:context=".NewPostActivity">
 
 
-
-
-
     <TextView
         android:id="@+id/textNewPost"
         android:layout_width="wrap_content"
@@ -23,20 +20,70 @@
         android:textSize="34sp"
         tools:ignore="MissingConstraints" />
 
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/urbanist"
+        android:text="@string/postTitle"
+        android:textColor="@color/gray_text"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewPost"
+        tools:ignore="MissingConstraints" />
 
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/titleEditTxt"
+        android:layout_width="305dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="@color/gray_2"
+        android:fontFamily="@font/urbanist"
+        android:hint="¿Sobre qué canción hablarás?"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        tools:ignore="MissingConstraints" />
 
+    <TextView
+        android:id="@+id/textLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/urbanist"
+        android:text="@string/postDescription"
+        android:textColor="@color/gray_text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionEditTextMulti"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
-
-
-
-
-
-
-
+    <EditText
+        android:id="@+id/descriptionEditTextMulti"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="@color/gray_2"
+        android:fontFamily="@font/urbanist"
+        android:hint="¿Qué piensas de la canción?"
+        android:inputType="textMultiLine"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleEditTxt"
+        tools:ignore="MissingConstraints" />
 
 
     <Button
-        android:id="@+id/buttonSignUp"
+        android:id="@+id/publishBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle"
@@ -47,9 +94,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
