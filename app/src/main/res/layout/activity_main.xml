@@ -24,12 +24,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:labelVisibilityMode="labeled"
+        app:backgroundTint="@color/black_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:itemTextAppearanceActive="@style/activeTextMenu"
+        app:itemTextAppearanceInactive="@style/inactiveTextMenu"
+        app:itemTextColor="@color/white"
+        android:background="@color/black"
         app:menu="@menu/bottom_menu"
         tools:ignore="MissingConstraints" />
-
-
+    
 </androidx.constraintlayout.widget.ConstraintLayout>

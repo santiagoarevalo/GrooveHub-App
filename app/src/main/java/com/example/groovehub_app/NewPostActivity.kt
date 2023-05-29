@@ -14,6 +14,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
+
 class NewPostActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNewPostBinding
@@ -23,14 +24,15 @@ class NewPostActivity : AppCompatActivity() {
         binding = ActivityNewPostBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.publishBttn.setOnClickListener(::publishPost)
+        binding.buttonPost.setOnClickListener(::publishPost)
     }
 
     private fun publishPost(view: View) {
-        val title = binding.titleEditTxt.text.toString()
-        val description = binding.descriptionEditTextMulti.text.toString()
+        val title = binding.titlePost.text.toString()
+        val description = binding.bodyPost.text.toString()
         val username = FirebaseAuth.getInstance().currentUser!!.email.toString()
-        val post = Post(0,title,username, description, 0)
+        val avatar = binding.imageProfilePhoto.drawable.alpha
+        val post = Post(avatar,title,username, description, 0)
         val postId = UUID.randomUUID().toString()
 
         if(!verifyPostFields(title, description)) {
