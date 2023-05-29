@@ -2,17 +2,12 @@ package com.example.groovehub_app
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.groovehub_app.databinding.ActivityNewPostBinding
 import com.example.groovehub_app.model.Post
-import com.example.groovehub_app.model.User
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
@@ -27,20 +22,21 @@ class NewPostActivity : AppCompatActivity() {
         binding = ActivityNewPostBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.buttonPost.setOnClickListener(::publishPost)
+        binding.buttonPost.setOnClickListener{publishPost()}
     }
 
-    private fun publishPost(view: View) {
+    private fun publishPost() {
         val title = binding.titlePost.text.toString()
         val description = binding.bodyPost.text.toString()
-        val username = FirebaseAuth.getInstance().currentUser!!.email!!.substringBefore("@")
-        val post = Post(0,title, username, description, 0)
+        val postOwnerUsername = getCurrentUsername()
+        Log.e("USERNAME TO DB>>>>>", postOwnerUsername)
+        //var usernameTest = FirebaseAuth.getInstance().currentUser!!.email.toString().substringBefore("@")
+        val post = Post(0,title, postOwnerUsername, description, 0)
         val postId = UUID.randomUUID().toString()
 
         if(!verifyPostFields(title, description)) {
-            println(verifyPostFields(title, description))
-            Firebase.firestore.collection("posts").document(postId).set(post);
-            Toast.makeText(this, "¡Publicación exitosa!", Toast.LENGTH_SHORT).show();
+            Firebase.firestore.collection("posts").document(postId).set(post)
+            Toast.makeText(this, "¡Publicación exitosa!", Toast.LENGTH_SHORT).show()
             returnMainActivity()
         }else {
             Toast.makeText(this, "Llena los campos de la publicación", Toast.LENGTH_SHORT).show()
@@ -57,28 +53,16 @@ class NewPostActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun getCurrentUser(callback: (User?) -> Unit) {
-        val currentUser = FirebaseAuth.getInstance().currentUser
-        if(currentUser != null) {
-            val uid = currentUser.uid
-            val usersRef = FirebaseDatabase.getInstance().getReference("users")
-
-            val userListener = object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    val userSnapshot = snapshot.child(uid)
-                    val user = userSnapshot.getValue(User::class.java)
-                    callback(user)
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-                    callback(null)
-                }
+    private fun getCurrentUsername() : String {
+        var usernameLogged = ""
+        if(FirebaseAuth.getInstance().currentUser != null) {
+            val actualUserId = FirebaseAuth.getInstance().currentUser!!.uid
+            Firebase.firestore.collection("users").document(actualUserId).get().addOnSuccessListener {
+                usernameLogged = it.get("username").toString()
+                Log.e("USERNAME >>>>>", usernameLogged)
 
             }
-
-            usersRef.addListenerForSingleValueEvent(userListener)
-        }else {
-            callback(null)
         }
+        return usernameLogged
     }
 }
