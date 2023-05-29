@@ -39,6 +39,10 @@ class PostAdapter: Adapter<PostViewHolder>() {
         return posts.size
     }
 
+    fun getPosts() : ArrayList<Post> {
+        return posts
+    }
+
 
 
 }

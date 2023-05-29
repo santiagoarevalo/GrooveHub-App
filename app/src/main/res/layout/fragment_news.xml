@@ -24,11 +24,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:menu="@menu/notifications_menu"
-            app:itemTextAppearanceActive="@style/activeTextMenu"
-            app:itemTextAppearanceInactive="@style/inactiveTextMenu"
-            app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
-            app:itemTextColor="@color/white"
-            android:background="@color/black_bg"
             tools:ignore="MissingConstraints">
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>

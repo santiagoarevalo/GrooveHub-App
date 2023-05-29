@@ -1,8 +1,9 @@
 package com.example.groovehub_app.model
 
-data class Post(val avatar: Int,
-                val title: String,
-                val username: String,
-                val description :String,
-                val cover : Int
-)
+import java.io.Serializable
+data class Post(val avatar: Int = 0,
+                val title: String = "",
+                val username: String = "",
+                val description :String = "",
+                val cover : Int = 0
+) : Serializable
