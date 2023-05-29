@@ -37,6 +37,8 @@
     //NewPost strings
     <string name="newPost">Nueva Publicación</string>
     <string name="postIt">Publicar</string>
+    <string name="postTitle">Título</string>
+    <string name="postDescription">Descripción</string>
 
 
 
