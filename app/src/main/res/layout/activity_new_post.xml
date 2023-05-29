@@ -9,47 +9,125 @@
     android:theme="@style/Theme.GrooveHubApp.NoActionBar"
     tools:context=".NewPostActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
+        <ImageButton
+            android:id="@+id/backToHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black_bg"
+            app:srcCompat="@drawable/ic_arrow_back" />
 
-
-    <TextView
-        android:id="@+id/textNewPost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/urbanist"
-        android:text="@string/newPost"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        tools:ignore="MissingConstraints" />
-
-
-
-
-
-
-
-
-
-
-
-
+        <TextView
+            android:id="@+id/textNewPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/urbanist"
+            android:text="@string/newPost"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
 
     <Button
-        android:id="@+id/buttonSignUp"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonPost"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/rectangle"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/urbanist"
         android:text="@string/postIt"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center|start"
+            android:orientation="horizontal">
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/viewProfilePhoto"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardCornerRadius="30dp">
 
+                <ImageView
+                    android:id="@+id/imageProfilePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/titlePost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:hint="@string/postTitle"
+                android:textColor="@color/white"
+                android:fontFamily="@font/urbanist"
+                android:textColorHint="@color/gray_text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/bodyPost"
+            android:layout_width="match_parent"
+            android:layout_height="272dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/urbanist"
+            android:gravity="start|top"
+            android:hint="@string/postBody"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/pickArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/urbanist"
+            android:text="@string/pickArtist"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

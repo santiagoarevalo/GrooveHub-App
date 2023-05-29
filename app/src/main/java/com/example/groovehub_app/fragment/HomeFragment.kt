@@ -34,8 +34,6 @@ class HomeFragment : Fragment(R.layout.fragment_home){
            startActivity(Intent(binding.root.context, NewPostActivity::class.java))
         }
 
-
-
         return binding.root
     }
 }

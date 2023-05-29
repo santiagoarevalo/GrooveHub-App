@@ -37,7 +37,9 @@
     //NewPost strings
     <string name="newPost">Nueva Publicación</string>
     <string name="postIt">Publicar</string>
-
+    <string name="postTitle">Escribe un titulo...</string>
+    <string name="postBody">¿Qué suena en tu mente?</string>
+    <string name="pickArtist">Selecciona un artista</string>
 
 
 </resources>

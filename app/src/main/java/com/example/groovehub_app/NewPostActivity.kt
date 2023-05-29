@@ -1,5 +1,6 @@
 package com.example.groovehub_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.groovehub_app.databinding.ActivityLoginBinding
@@ -13,5 +14,14 @@ class NewPostActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNewPostBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.backToHome.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+
+        binding.buttonPost.setOnClickListener {
+            //Enviar Post a BD
+        }
+
     }
 }
