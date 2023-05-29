@@ -2,7 +2,6 @@ package com.example.groovehub_app.fragment
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +26,7 @@ class HomeFragment : Fragment(R.layout.fragment_home){
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding: FragmentHomeBinding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.postsList.layoutManager= LinearLayoutManager(activity)
         binding.postsList.adapter = adapter
@@ -47,7 +46,6 @@ class HomeFragment : Fragment(R.layout.fragment_home){
         Firebase.firestore.collection("posts").get().addOnCompleteListener { task ->
             for(doc in task.result!!) {
                 val post = doc.toObject(Post::class.java)
-                Log.e(">>>>>", post.title)
                 adapter.getPosts().add(post)
                 adapter.notifyDataSetChanged()
             }
