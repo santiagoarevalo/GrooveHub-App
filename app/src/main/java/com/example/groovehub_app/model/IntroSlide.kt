@@ -1,4 +1,4 @@
-package com.example.groovehub_app
+package com.example.groovehub_app.model
 
 
 data class IntroSlide(

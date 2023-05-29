@@ -11,6 +11,7 @@ import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
 import com.example.groovehub_app.adapter.IntroSliderAdapter
 import com.example.groovehub_app.databinding.ActivityCarrouselBinding
+import com.example.groovehub_app.model.IntroSlide
 
 class CarrouselActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCarrouselBinding

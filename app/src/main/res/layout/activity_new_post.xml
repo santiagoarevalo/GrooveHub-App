@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_bg"
+    android:backgroundTint="@color/black_bg"
+    android:theme="@style/Theme.GrooveHubApp.NoActionBar"
+    tools:context=".NewPostActivity">
+
+
+
+
+
+    <TextView
+        android:id="@+id/textNewPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/urbanist"
+        android:text="@string/newPost"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/urbanist"
+        android:text="@string/postIt"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
