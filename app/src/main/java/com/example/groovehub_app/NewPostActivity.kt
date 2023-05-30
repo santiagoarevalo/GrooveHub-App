@@ -22,47 +22,46 @@ class NewPostActivity : AppCompatActivity() {
         binding = ActivityNewPostBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.buttonPost.setOnClickListener{publishPost()}
+        binding.buttonPost.setOnClickListener { publishPost() }
     }
 
     private fun publishPost() {
         val title = binding.titlePost.text.toString()
         val description = binding.bodyPost.text.toString()
-        val postOwnerUsername = getCurrentUsername()
-        Log.e("USERNAME TO DB>>>>>", postOwnerUsername)
-        //var usernameTest = FirebaseAuth.getInstance().currentUser!!.email.toString().substringBefore("@")
-        val post = Post(0,title, postOwnerUsername, description, 0)
-        val postId = UUID.randomUUID().toString()
-
-        if(!verifyPostFields(title, description)) {
-            Firebase.firestore.collection("posts").document(postId).set(post)
-            Toast.makeText(this, "¡Publicación exitosa!", Toast.LENGTH_SHORT).show()
-            returnMainActivity()
-        }else {
-            Toast.makeText(this, "Llena los campos de la publicación", Toast.LENGTH_SHORT).show()
+        getCurrentUsername { username ->
+            Log.e(">>>", username)
+            val post = Post(0, title, username, description, 0)
+            val postId = UUID.randomUUID().toString()
+            if (!verifyPostFields(title, description)) {
+                Firebase.firestore.collection("posts").document(postId).set(post)
+                Toast.makeText(this, "¡Publicación exitosa!", Toast.LENGTH_SHORT).show()
+                returnMainActivity()
+            } else {
+                Toast.makeText(this, "Llena los campos de la publicación", Toast.LENGTH_SHORT)
+                    .show()
+            }
         }
     }
 
-    private fun verifyPostFields(title: String, description: String) : Boolean {
+    private fun verifyPostFields(title: String, description: String): Boolean {
         return (title.isEmpty() || description.isEmpty())
     }
 
     private fun returnMainActivity() {
-        val intent = Intent(this,MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
     }
 
-    private fun getCurrentUsername() : String {
+    private fun getCurrentUsername(function: (String) -> Unit)  {
         var usernameLogged = ""
-        if(FirebaseAuth.getInstance().currentUser != null) {
+        if (FirebaseAuth.getInstance().currentUser != null) {
             val actualUserId = FirebaseAuth.getInstance().currentUser!!.uid
             Firebase.firestore.collection("users").document(actualUserId).get().addOnSuccessListener {
                 usernameLogged = it.get("username").toString()
                 Log.e("USERNAME >>>>>", usernameLogged)
-
+                function(usernameLogged)
             }
         }
-        return usernameLogged
     }
 }
