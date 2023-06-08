@@ -12,6 +12,9 @@
         android:theme="@style/Theme.GrooveHubApp"
         tools:targetApi="31">
         <activity
+            android:name=".SearchSong"
+            android:exported="false" />
+        <activity
             android:name=".NewPostActivity"
             android:exported="false" />
         <activity

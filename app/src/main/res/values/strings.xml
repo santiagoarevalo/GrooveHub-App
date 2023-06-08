@@ -26,7 +26,7 @@
     <string name="notificationTitle">Notifications</string>
     <string name="faberCastell"> faberCastelln\'t liked your post. 2w </string>
     <string name="notificationMessage">You have %1$d new notifications</string>
-    <string name= "followingBttn">Following</string>
+    <string name="followingBttn">Following</string>
     <string name="allNews">All</string>
     <string name="artistsNews">Artists</string>
     <string name="newFollowNotification">started following you</string>
@@ -39,7 +39,7 @@
     <string name="postIt">Publicar</string>
     <string name="postTitle">Escribe un titulo...</string>
     <string name="postBody">¿Qué suena en tu mente?</string>
-    <string name="pickArtist">Selecciona un artista</string>
+    <string name="pickSong">Busca tu canción...</string>
 
 
 </resources>

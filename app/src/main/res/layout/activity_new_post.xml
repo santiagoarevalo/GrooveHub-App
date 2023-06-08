@@ -106,29 +106,57 @@
 
         <EditText
             android:id="@+id/bodyPost"
+            android:background= "@drawable/stroke_edittext"
             android:layout_width="match_parent"
-            android:layout_height="272dp"
+            android:layout_height="250dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/urbanist"
             android:gravity="start|top"
             android:hint="@string/postBody"
+            android:inputType="text"
             android:textColor="@color/white"
             android:textColorHint="@color/gray_text"
-            android:textSize="16sp"
-            android:inputType="text"/>
+            android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/pickArtist"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/urbanist"
-            android:text="@string/pickArtist"
-            android:textColor="@color/white"
-            android:textSize="20sp"/>
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/buttonAttachSong"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/rectangle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_playlist_add_24" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/viewSong"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonAttachSong">
+
+                <ImageView
+                    android:id="@+id/imageSong"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </LinearLayout>
 
