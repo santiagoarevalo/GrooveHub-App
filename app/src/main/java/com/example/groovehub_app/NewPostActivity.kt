@@ -3,9 +3,12 @@ package com.example.groovehub_app
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.groovehub_app.api.SpotifyApiRequest
 import com.example.groovehub_app.databinding.ActivityNewPostBinding
+import com.example.groovehub_app.databinding.ActivitySearchSongBinding
 import com.example.groovehub_app.model.Post
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
@@ -23,6 +26,8 @@ class NewPostActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonPost.setOnClickListener { publishPost() }
+        binding.backToHome.setOnClickListener { returnMainActivity() }
+        binding.buttonAttachSong.setOnClickListener { attachSongToPost() }
     }
 
     private fun publishPost() {
@@ -63,5 +68,10 @@ class NewPostActivity : AppCompatActivity() {
                 function(usernameLogged)
             }
         }
+    }
+    private fun attachSongToPost(){
+        val intent = Intent(this, SearchSong::class.java)
+        startActivity(intent)
+        finish()
     }
 }
