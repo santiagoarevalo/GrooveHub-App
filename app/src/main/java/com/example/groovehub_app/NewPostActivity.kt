@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.groovehub_app.api.SpotifyApiRequest
 import com.example.groovehub_app.databinding.ActivityNewPostBinding
 import com.example.groovehub_app.databinding.ActivitySearchSongBinding
 import com.example.groovehub_app.model.Post
