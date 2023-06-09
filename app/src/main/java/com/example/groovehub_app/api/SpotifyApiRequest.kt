@@ -28,7 +28,7 @@ class SpotifyApiRequest {
     // Performs Spotify database query for queries related to track information. Returns
     // the results as a SpotifySearchResult object.
     suspend fun trackSearch(searchQuery: String): SpotifySearchResult {
-        return api!!.search.searchAllTypes(searchQuery, 50, 1, market = Market.US)
+        return api!!.search.searchAllTypes(searchQuery, 10, 1, market = Market.US)
     }
 
 }
