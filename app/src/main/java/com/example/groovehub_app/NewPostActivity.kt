@@ -52,6 +52,7 @@ class NewPostActivity : AppCompatActivity() ,PostListener{
         val title = binding.titlePost.text.toString()
         val description = binding.bodyPost.text.toString()
         val cover:String? =binding.ivPostSongCover.tag as? String
+        Log.e("Cover de cancion",cover.toString())
         getCurrentUsername { username ->
             val post = Post(0, title, username, description,cover.toString())
             val postId = UUID.randomUUID().toString()
