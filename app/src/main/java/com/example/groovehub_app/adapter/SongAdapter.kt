@@ -1,44 +1,32 @@
 package com.example.groovehub_app.adapter
 
+import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView.Adapter
+import android.widget.ArrayAdapter
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.core.net.toUri
 import com.example.groovehub_app.R
-import com.example.groovehub_app.model.Post
 import com.example.groovehub_app.model.Song
-import com.example.groovehub_app.viewholder.SongViewHolder
+import com.squareup.picasso.Picasso
 
-class SongAdapter: Adapter<SongViewHolder>() {
+class SongAdapter(private val context: Activity,private val songs:ArrayList<Song> ):ArrayAdapter<Song>(context,
+    R.layout.song_view,songs){
 
-    private var Songs:ArrayList<Song> = arrayListOf()
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val inflater:LayoutInflater = LayoutInflater.from(context)
+        val view:View = inflater.inflate(R.layout.song_view,null)
+        val imageView:ImageView = view.findViewById(R.id.ivSongCover)
+        val title:TextView = view.findViewById(R.id.tvSongTitle)
+        val artist:TextView = view.findViewById(R.id.tvSongArtist)
 
+        Picasso.get().load(songs[position].cover).error(R.mipmap.ic_launcher).into(imageView)
+        title.text= songs[position].title
+        artist.text=songs[position].artist
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongViewHolder {
-        val layoutInflater: LayoutInflater = LayoutInflater.from(parent.context)
-        val view: View = layoutInflater.inflate(R.layout.song_view, parent,false)
-        val holder = SongViewHolder(view)
-        return holder
+        return view
     }
-
-    override fun onBindViewHolder(holder: SongViewHolder, position: Int) {
-        holder.title.text = Songs[position].title
-        holder.artist.text = Songs[position].artist
-        //holder.songImage.int = Songs[position].cover
-    }
-
-    override fun getItemCount(): Int {
-        return Songs.size
-    }
-
-    fun getSongs() : ArrayList<Song> {
-        return Songs
-    }
-
-    fun addSongs(song: Song){
-        Songs.add(song)
-    }
-
-
 
 }

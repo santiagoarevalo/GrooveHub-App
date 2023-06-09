@@ -5,5 +5,5 @@ data class Post(val avatar: Int = 0,
                 val title: String = "",
                 val username: String = "",
                 val description :String = "",
-                val cover : Int = 0
+                val cover : String=""
 ) : Serializable

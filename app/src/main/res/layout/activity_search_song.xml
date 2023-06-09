@@ -46,7 +46,7 @@
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ListView
         android:id="@+id/song_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -54,9 +54,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/song_view"
         app:layout_constraintTop_toBottomOf="@+id/SearchSongLayout">
 
-    </androidx.recyclerview.widget.RecyclerView>
+    </ListView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

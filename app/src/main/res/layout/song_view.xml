@@ -29,11 +29,13 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp">
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp">
 
                 <ImageView
-                    android:id="@+id/imageSong"
+                    android:id="@+id/ivSongCover"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/ic_launcher_background" />
@@ -47,7 +49,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/txtTitle"
+                    android:id="@+id/tvSongTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -60,7 +62,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txtArtist"
+                    android:id="@+id/tvSongArtist"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_marginStart="20dp"
