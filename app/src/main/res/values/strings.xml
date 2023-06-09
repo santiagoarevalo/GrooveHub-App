@@ -1,3 +1,45 @@
 <resources>
+
+    //Carousel and login strings
     <string name="app_name">GrooveHub-App</string>
+    <string name="Email">Email</string>
+    <string name="Password">Contraseña</string>
+    <string name="SignUp">Registrarse</string>
+    <string name="LogIn">Ingresar</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+    <string name="skip_intro">SALTAR INTRODUCCIÓN</string>
+    <string name="next_btn">SIGUIENTE</string>
+    <string name="my_account">Mi Cuenta</string>
+    <string name="name">Nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="ForgotPass">Olvidé mi contraseña</string>
+
+
+    //Search strings
+    <string name="searchHint">Search</string>
+
+
+    //Notification strings
+    <string name="notificationTitle">Notifications</string>
+    <string name="faberCastell"> faberCastelln\'t liked your post. 2w </string>
+    <string name="notificationMessage">You have %1$d new notifications</string>
+    <string name="followingBttn">Following</string>
+    <string name="allNews">All</string>
+    <string name="artistsNews">Artists</string>
+    <string name="newFollowNotification">started following you</string>
+    <string name="newLikeNotification">liked your post</string>
+    <string name="newCommentNotification">commented on your post</string>
+    <string name="newShareNotification">shared your post</string>
+
+    //NewPost strings
+    <string name="newPost">Nueva Publicación</string>
+    <string name="postIt">Publicar</string>
+    <string name="postTitle">Escribe un titulo...</string>
+    <string name="postBody">¿Qué suena en tu mente?</string>
+    <string name="pickSong">Busca tu canción...</string>
+
+
 </resources>

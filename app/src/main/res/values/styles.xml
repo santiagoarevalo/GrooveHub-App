@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="faberCastellStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor"> @color/neutral_400 </item>
+    </style>
+
+    <style name="inactiveTextMenu" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="activeTextMenu" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/purple_50</item>
+    </style>
+</resources>

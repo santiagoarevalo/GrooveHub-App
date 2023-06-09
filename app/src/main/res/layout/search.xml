@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_bg">
+
+    <!-- Redondear el card view-->
+
+
+    <TextView
+        android:id="@+id/usernameTV"
+        android:layout_width="176dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/urbanist"
+        android:text="el_capy"
+        android:textColor="@color/purple_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/followBttn"
+        app:layout_constraintStart_toEndOf="@+id/userImageCardView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/userImageCardView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/usernameTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+        <ImageView
+            android:src="@drawable/icon_search_person"
+            android:id="@+id/imageUserNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Redondear los bordes del boton -->
+
+    <TextView
+        android:id="@+id/followBttn"
+        android:layout_width="57dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="17dp"
+        android:text="Following"
+        android:fontFamily="@font/urbanist"
+
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.588" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Text View"
+        android:fontFamily="@font/urbanist"
+
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/followBttn"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toEndOf="@+id/userImageCardView"
+        app:layout_constraintTop_toBottomOf="@+id/usernameTV" />
+
+    <Button
+        android:background="@drawable/img_close"
+        android:id="@+id/myButton"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:padding="0dp"
+        android:textColorHighlight="#737373"
+        android:textColorHint="#737373"
+        android:textColorLink="#737373"
+        app:iconTint="#737373"
+        tools:layout_editor_absoluteX="382dp"
+        tools:layout_editor_absoluteY="28dp"
+        tools:ignore="MissingConstraints"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

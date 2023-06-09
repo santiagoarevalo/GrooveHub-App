@@ -5,11 +5,11 @@ GrooveHub App is a music social network that allows interaction between users ar
 
 ## <b> Documentation </b> 📄
 
-- *!Here Link!: [Documentation]()*
+- *!Here Link!: [Documentation](https://github.com/santiagoarevalo/GrooveHub-App/tree/xml-creation/docs)*
 
 - *!Here Link!: [Figma](https://www.figma.com/proto/8ay1JZUfGyoTpLbdMzCNjj/GrooveHub?node-id=6%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=6%3A2&show-proto-sidebar=1)*
 
-- *!Here Link!: [Trello]()*
+- *!Here Link!: [Notion](https://www.notion.so/groovehub/Maqueta-GrooveHub-App-460954265dd4409d9fb911ba5b309b74?pvs=4)*
 
 
 ## <b> Built with </b> 🛠
